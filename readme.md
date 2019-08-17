@@ -1,6 +1,6 @@
 ### Boilerplate Horizontal Bar Chart - stacked, with annotations and dropdown
 
-This is a boilerplate horizontal stacked bar chart with annotations and a dropdown for changing data. It was created with D3 and vanilla JS. It features animated transitions on data changes.
+This is a boilerplate horizontal stacked bar chart with annotations and a dropdown for changing data. It was created with D3 and vanilla JS.
 
 Here's a working [example](https://s3.amazonaws.com/dsr-data-viz/2019/boilerplate-chart-bar-horiz-stacked-anno-dynamic/index.html).
 
