@@ -51,10 +51,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server --mode development",
-    "test-es5": "es-check es5 './public/dist/bundle.js'",
-    "test-es6": "es-check es6 './public/dist/bundle.js'"
+    "dev-server": "webpack-dev-server --mode development"
   },
-  "author": "DSR",
-  "license": "ISC"
+  "author": "Daniel Simmons-Ritchie",
+  "license": "MIT"
 }
