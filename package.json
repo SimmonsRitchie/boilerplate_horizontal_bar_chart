@@ -1,7 +1,7 @@
 {
   "name": "boilerplate-horiz-bar-chart",
   "version": "1.0.0",
-  "description": "Boilerplate for horizontal stacked graph",
+  "description": "Boilerplate for horizontal stacked graph created with D3",
   "main": "./src/app.js",
   "dependencies": {
     "d3-array": "^2.0.3",
