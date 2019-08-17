@@ -7,17 +7,12 @@ Creates our drop down selector for our datatable.
 Takes in data, gets distinct values, and appends distinct items as options to
 a selector in index.html using jQuery selectors.
 
-NOTE: An earlier version of this module required setting names of data groups here. Instead,
-set names of data groups in loadAndProcessData module.
 */
 
 // --------------------------- IMPORTS ---------------------------
 
 // third party imports
 import {select} from 'd3-selection'
-
-// my imports
-import { resize } from './index'
 
 // --------------------------- BUILD DROPDOWN ---------------------------
 
