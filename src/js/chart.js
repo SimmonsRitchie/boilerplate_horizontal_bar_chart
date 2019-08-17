@@ -19,11 +19,10 @@ import { scaleLinear, scaleBand, scaleOrdinal } from "d3-scale";
 import { axisBottom, axisLeft } from "d3-axis";
 import { transition } from "d3-transition";
 import { stack } from "d3-shape"
-import { schemeSet2, schemeSet3, schemePaired } from 'd3-scale-chromatic'
+import { schemePaired } from 'd3-scale-chromatic'
 import { annotation, annotationLabel } from 'd3-svg-annotation'
 
 // My imports
-import { widthTween } from "./tween";
 import { tooltipOn, tooltipOff } from "./tooltip";
 import { filterData } from "./filter"
 import { flattenXValIntoArray } from './parse'
