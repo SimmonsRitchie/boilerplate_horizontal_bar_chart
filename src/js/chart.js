@@ -114,15 +114,10 @@ export const drawChart = (rawData, props) => {
     .paddingOuter(0.2);
 
   // CREATE COLOR SCALE - FOR STACKED SUBGROUPS
-  // const colorScale = scaleOrdinal(schemeSet2)
-  // const colorScale = scaleOrdinal(schemePaired)
-  // const colorScale = scaleOrdinal(schemePaired).range(["#E3BA22","#F2DA57"]) // custom yellow color scheme
-  // const colorScale = scaleOrdinal(schemePaired).range(["#137B80","#42A5B3"]) // custom blue color scheme
   const colorScale = scaleOrdinal(schemePaired).range(["#E6842A","#F6B656"]) // custom orange color scheme
 
   // GENERATE X AXIS
   const xAxis = axisBottom(xScale) // we pass in x scale so D3 knows where to position everything
-    // .tickFormat(xAxisTickFormat)
     .tickSize(-graphHeight) // by setting ticksize to graphWidth we can create horizontal gridlines
     .ticks(max([graphWidth / 130, 2])) // RESPONSIVE: at least two ticks, add more depending on height (NOTE: d3 will make judgements about what looks best, re: number of ticks)
 
@@ -149,7 +144,6 @@ export const drawChart = (rawData, props) => {
 
   // 1) UPDATING DOMAINS IN SCALES
   // Domain will change every time data is updated. Adjust this for a constant domain.
-  // xScale.domain([100, 0]); // get max of data to create Y scale domain
   const arrayOfXValues = flattenXValIntoArray(data.values)
   xScale.domain([0, max(arrayOfXValues)]); // get max of data to create Y scale domain
   yScale.domain(yVals);
@@ -161,7 +155,6 @@ export const drawChart = (rawData, props) => {
   const bars = barGroup.selectAll('.bar')
   const legendContainer = select('.container__legend')
   const legendGroup = legendContainer.selectAll('.legend__group').data(xValSubGroups)
-  const legendLabels = legendGroup.select('.legend__label').data(xValSubGroups)
 
   // 3) REMOVE UNWANTED SHAPES (IF NEEDED)
   barGroup.exit().remove();
@@ -196,7 +189,6 @@ export const drawChart = (rawData, props) => {
   xAxisGroup
     .transition(t)
     .call(xAxis)
-    // .call(g => g.select(".domain").remove()); // this gets rid of the X axis line, which has the class "domain", using post selection method
   select("path.domain").remove(); // this gets rid of the Y axis line, which has the class "domain"
 
   yAxisGroup
@@ -232,7 +224,6 @@ export const drawChart = (rawData, props) => {
     note: { label: "Pay"},
     nx: anno1LabelPos.x, ny: anno1LabelPos.y, // label location
     x: anno1TargetPos.x, y: anno1TargetPos.y, // pointer location
-    // dy: -15, dx: -20, // label location, relative to pointer
     type: annotationLabel,
     connector: {
       end: "dot", // 'dot' also available
@@ -247,7 +238,6 @@ export const drawChart = (rawData, props) => {
     note: { label: "Raise"},
     nx: anno2LabelPos.x, ny: anno2LabelPos.y, // label location
     x: anno2TargetPos.x, y: anno2TargetPos.y, // pointer location
-    // dy: -15, dx: -20, // label location, relative to pointer
     type: annotationLabel,
     connector: {
       end: "dot", // 'dot' also available
