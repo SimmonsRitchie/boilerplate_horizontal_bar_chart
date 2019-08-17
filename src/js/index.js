@@ -13,8 +13,6 @@ Chart's responsiveness follows 'progressive disclosure philosophy'. More parts o
 appear in the DOM as the graph is resized. To adjust these elements, including margins, adjust
 chart.js
 
-Note: tween module is no longer used in transition but I've left it in case we want to re-use it.
-
 When adapting this boilerplate don't forget to change:
 - filenames and data names in loadAndProcessData
 - annotation positions and names in chart.js
@@ -25,18 +23,13 @@ When adapting this boilerplate don't forget to change:
 
 // Third party
 import {select} from 'd3-selection'
-import {scaleLinear, scaleBand} from 'd3-scale';
-import {axisBottom, axisLeft} from 'd3-axis';
-import {transition} from 'd3-transition'
 import debounce from 'debounce';
-import {max} from 'd3-array'
 
 // My imports
 import { loadAndProcessData } from "./loadAndProcessData";
 import { createDropdownSelector } from "./dropdownSelector";
 import { drawChart } from './chart';
-import { tooltipOn, tooltipOff } from "./tooltip";
-import { filterData } from "./filter";
+
 // --------------------------- CANVAS SETUP AND BASIC PROPS ---------------------------
 
   // SET BASIC PROPS
