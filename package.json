@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-graph",
+  "name": "boilerplate-horiz-bar-chart",
   "version": "1.0.0",
   "description": "Boilerplate for horizontal stacked graph",
   "main": "./src/app.js",
