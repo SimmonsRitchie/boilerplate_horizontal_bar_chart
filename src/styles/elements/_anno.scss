@@ -1,0 +1,27 @@
+// ANNOTATIONS
+
+// label text
+.annotation-note-label { 
+  fill: $text-main;
+  font-size: $font-size-x-small;
+
+  @media (min-width: $mid-breakpoint) {
+    font-size: $font-size-small;
+  }
+}
+
+.annotation-connector {
+
+  // line that connects label to dot
+  .connector {
+    stroke: $text-main;
+  }
+
+  // dot/pointer at end of connector
+  .connector-end {
+    fill: $text-main;
+    stroke: $text-main;
+  }
+
+
+}
